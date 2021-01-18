@@ -2,45 +2,23 @@ import 'react-native-gesture-handler';
 import Icon from 'react-native-ionicons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import * as React from 'react';
+import {useState} from 'react';
 import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeScreen from './Components/HomeScreen';
+import MapScreen from './Components/MapScreen';
+import ShopScreen from './Components/ShopScreen';
+import ProfileScreen from './Components/ProfileScreen';
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-      <Text>
-        <Icon name="add" size={40} color="red" />
-      </Text>
-    </View>
-  );
-}
 
-function MapScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Map!</Text>
-    </View>
-  );
-}
-function ShopScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-     <Text>Shop!</Text>
-    </View> 
- );
-}  
-function ProfileScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-     <Text>Profile!</Text>
-    </View> 
- );
-}  
+
+
+ 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+  
   return (
     <NavigationContainer>
       <Tab.Navigator
